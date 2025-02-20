@@ -1,0 +1,41 @@
+@import "../../assets/styles/variables";
+
+.card {
+  width: 325px;
+  height: 425px;
+  padding: 20px;
+  background-color: $LightGray;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px 0 #0a0d0e20;
+  cursor: pointer;
+  transition: 0.3s;
+
+  .img_box {
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    user-select: none;
+
+    img {
+      width: 100%;
+      scale: 105%;
+      transition: 0.3s;
+    }
+  }
+
+  h1 {
+    margin-top: 10px;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    background-color: $Gray;
+
+    img {
+      scale: 110%;
+    }
+  }
+}

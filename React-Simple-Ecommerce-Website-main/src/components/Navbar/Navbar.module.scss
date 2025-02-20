@@ -1,0 +1,104 @@
+@import "../../assets/styles/variables";
+
+.navbar {
+  width: 100vw;
+  height: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  user-select: none;
+  z-index: 10;
+  transition: 0.3s;
+
+  .logo {
+    a {
+      display: flex;
+      gap: 5px;
+
+      img {
+        width: 3rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        color: $White;
+      }
+    }
+  }
+
+  .link_group {
+    display: flex;
+    gap: 1rem;
+
+    li {
+      display: flex;
+      justify-content: center;
+
+      a {
+        padding: 1rem;
+        line-height: 1rem;
+        font-size: 1.75rem;
+        background-color: $Gray30;
+        border: 1px solid #cfd8dc00;
+        border-radius: 1rem;
+        cursor: pointer;
+        user-select: none;
+        text-align: center;
+        color: $White;
+        position: relative;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: $LightGray50;
+        }
+
+        path {
+          color: $White;
+        }
+
+        span {
+          position: absolute;
+          min-width: 1.25rem;
+          top: 9px;
+          right: 9px;
+          padding: 3px;
+          font-size: 0.875rem;
+          font-weight: 500;
+          line-height: 0.875rem;
+          color: $White;
+          background-color: $PrimaryColor;
+          border-radius: 1rem;
+
+          &.zero {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &.scroll {
+    background-color: $White;
+    box-shadow: 0 0 20px 0 #0a0d0e50;
+
+    .logo h1 {
+      color: $Black;
+    }
+
+    li a {
+      background: transparent;
+      border: 1px solid $Gray;
+
+      path {
+        color: $Black;
+      }
+
+      &:hover {
+        background-color: $Gray;
+      }
+    }
+  }
+}
